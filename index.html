@@ -4,101 +4,222 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History of England</title>
+    <title>Character Sheet</title>
 
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="pc_classes.js"></script>
+
 </head>
-
 <body>
+    <!-- <a href="index2.html">index2</a> -->
+
     <header>
-        <h1>History of England</h1>
-        <figure>
-            <img src="1920px-Flag_of_England.svg.png" height="200" alt="Flag of England" class = "bandera">
-            <figcaption style="text-align: center;">Flag of England</figcaption>
-        </figure>
+        <h1>Dungeons and Dragons Character Sheet</h1>
     </header>
-<main>
-    <section>
-        <h2>England Overview</h2>
-        <p>
-            England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north. 
-            The Irish Sea lies northwest of England and the Celtic Sea to the southwest. England is separated from continental Europe by the North Sea to the east 
-            and the English Channel to the south. The country covers five-eighths of the island of Great Britain, which lies in the North Atlantic, and includes over 
-            100 smaller islands, such as the Isles of Scilly and the Isle of Wight. 
-        </p>
-    </section>
-    <section>
-        <h3>Chronological Ages of England</h3>
-        <p>The history of England can be generally divided into the following eras:</p>
-        <ol>
-            <li><a href="prehistory.html">Prehistory</a></li>
-            <li><a href="roman_britain.html">Roman Britain</a></li>
-            <li><a href="anglo_saxon_period.html">Anglo-Saxon Period</a></li>
-            <li><a href="norman_england.html">Norman England</a></li>
-            <li><a href="england_plantagenets.html">England under the Plantagenets</a></li>
-            <li><a href="turdor_england.html">Tudor England</a></li>
-            <li><a href="17_century_england.html">17<sup>th</sup> Century England</a></li>
-            <li><a href="formation_of_gb_uk.html">Formation of Great Britain and the United Kingdom</a></li>
-            <li><a href="modern_england.html">Modern England, 18<sup>th</sup>-19<sup>th</sup> centuries</a></li>
-            <li><a href="20_21_centuries.html">20<sup>th</sup> and 21<sup>st</sup> centuries</a></li>
 
-        </ol>
-        <p>
-            Each era can also be subdivided into more specific periods. Such as the Viking incursions in the 9<sup>th</sup> century or the Victorian Era in the more recent
-            18<sup>th</sup> century.
-        </p>
+    <section id="pc_names">
+    <label for="i_character_name" id="character_name_label" class="player_info">Character Name</label>
+    <label for="player_name" id="player_name_label" class="player_info">Player Name</label>
+    <label for="pc_level" id="pc_level_label" class="player_info">Level</label>
+    <p><input type="text" id="i_character_name" class=player_info> 
+       <input type="text" id="player_name"> 
+       <input type="text" id="pc_level"> 
+    </p>
     </section>
-    <section>
-        <h3>Monarchs of England</h3>
-        <table>
-            <caption>Chronological list of the Monarchs of England</caption>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Birth</th>
-                    <th>Death</th>
-                    <th>Reign</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Alfred the great</td>
-                    <td>849</td>
-                    <td>899</td>
-                    <td>886-899</td>                    
-                </tr>
-                <tr>
-                    <td>Edward the Elder</td>
-                    <td>874</td>
-                    <td>924</td>
-                    <td>899-924</td>
-                </tr>
-                <tr>
-                    <td>Aethelstan</td>
-                    <td>894</td>
-                    <td>939</td>
-                    <td>924-939</td>
-                </tr>
-                <tr>
-                    <td>Edmund I</td>
-                    <td>921</td>
-                    <td>946</td>
-                    <td>939-946</td>
-                </tr>
-                <tr>
-                    <td>Eadred</td>
-                    <td>923</td>
-                    <td>955</td>
-                    <td>946-955</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</main>
-<footer>
 
-    <p>Copyright (c) 2021</p>
+
+
+    <section id= "basic_info">
+        <label for="character_class">Class:</label>
+        <select name="character_class" id="character_class" class=basic_info>
+            <option value="">--Please choose an option--</option>
+            <option value="bard">Bard</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rogue</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+        </select>
+
+        <label for="character_race">Race:</label>
+        <select name="character_race" id="character_race" class=basic_info>
+            <option value="">--Please choose an option--</option>
+            <option value="dragonborn">Dragonborn</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
+            <option value="gnome">Gnome</option>
+            <option value="half_elf">Half-Elf</option>
+            <option value="halfling">Halfling</option>
+            <option value="half_orc">Half-Orc</option>
+            <option value="human">Human</option>
+            <option value="tiefling">Tiefling</option>
+        </select>
+
+        <label for="character_alignment">Alignment:</label>
+        <select name="character_alignment" id="character_alignment" class=basic_info>
+            <option value="">--Please choose an option--</option>
+            <option value="lawful_good">Lawful Good</option>
+            <option value="neutral_good">Neutral Good</option>
+            <option value="chaotic_good">Chaotic Good </option>
+            <option value="lawful_neutral">Lawful Neutral</option>
+            <option value="true_neutral">True Neutral</option>
+            <option value="chaotic_neutral">Chaotic Neutral</option>
+            <option value="lawful_evil">Lawful Evil</option>
+            <option value="neutral_evil">Neutral Evil</option>
+            <option value="chaotic_evil">Chaotic Evil</option>
+        </select>
+    </section>
+    <section id="s_class_features">
+    <h2 id = "h_class_features"></h2>
+    <p id = "class_features"></p>
+    <h3 id = "h_hit_points"></h3>
+    <p id = "hit_points"></p>
+    <h3 id = "h_proficiencies"></h3>
+    <p id = "proficiencies"></p>
+    <h3 id = "h_equipment"></h3>
+    <p id = "equipment"></p>
+    <h3 id = "h_spellcasting"></h3>
+    <p id = "spellcasting"></p>
+    <h3></h3>
+
+    <p id=class_info>
+
+    </section>
+    </p>
     
-    </footer>
+    <script>
+        let h_class_features
+        let h_hitpoints
+
+        let bard_features
+        let bard_hitpoints
+
+        let barbarian_features
+        let barbarian_hitpoints
+
+        h_class_features = "Class features"
+
+        h_hitpoints = "Hit points"
+
+/*         bard_features = "<h4>Bardic Inspiration</h4> You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+
+        bard_hitpoints = "Hit Dice: 1d8 per bard level Hit Points at 1st Level: 8 + your Constitution modifier Hit Points at Higher Levels: 1d8 (or 5) + your Constitution modifier per bard level after 1st"
+
+        barbarian_features = "Rage In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren’t wearing heavy armor: You have advantage on Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table. You have resistance to bludgeoning, piercing, and slashing damage. If you are able to cast spells, you can’t cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again."
+
+        barbarian_hitpoints = "Hit Dice: 1d12 per barbarian level. Hit Points at 1st Level: 12 + your Constitution modifier. Hit Points at Higher Levels: 1d12 (or 7) + your Constitution modifier per barbarian level after 1st" */
+
+        
+        character_class.addEventListener("change", event =>{
+                        class_filter(character_class.value);
+ /*            if (character_class.value === "bard") {
+                document.getElementById("h_class_features").innerHTML = h_class_features;
+                document.getElementById("class_features").innerHTML = bard_features;
+                document.getElementById("h_hit_points").innerHTML = h_hitpoints;
+                document.getElementById("hit_points").innerHTML = bard_hitpoints;
+            }else if (character_class.value ==="barbarian") {
+                document.getElementById("h_class_features").innerHTML = h_class_features;
+                document.getElementById("class_features").innerHTML = barbarian_features;
+                document.getElementById("h_hit_points").innerHTML = h_hitpoints;
+                document.getElementById("hit_points").innerHTML = barbarian_hitpoints;
+            }else {
+                document.getElementById("h_class_features").innerHTML = "";
+                document.getElementById("class_features").innerHTML = "";
+                document.getElementById("h_hit_points").innerHTML = "";
+                document.getElementById("hit_points").innerHTML = "";
+            } */
+            
+            
+        }
+        )
+
+
+        document.addEventListener('DOMContentLoaded', event =>{
+            i_character_name.value = localStorage.getItem('i_character_name');
+            character_class.value = localStorage.getItem('character_class');
+            player_name.value = localStorage.getItem('player_name');
+            character_race.value = localStorage.getItem('character_race');
+            character_alignment.value = localStorage.getItem('character_alignment');
+            pc_level.value = localStorage.getItem('pc_level');
+            class_filter(character_class.value);
+
+/*             if (character_class.value === "bard") {
+                document.getElementById("h_class_features").innerHTML = h_class_features;
+                document.getElementById("class_features").innerHTML = bard_features;
+                document.getElementById("h_hit_points").innerHTML = h_hitpoints;
+                document.getElementById("hit_points").innerHTML = bard_hitpoints;
+            }else if (character_class.value ==="barbarian") {
+                document.getElementById("h_class_features").innerHTML = h_class_features;
+                document.getElementById("class_features").innerHTML = barbarian_features;
+                document.getElementById("h_hit_points").innerHTML = h_hitpoints;
+                document.getElementById("hit_points").innerHTML = barbarian_hitpoints;
+            
+        } */
+        })
+
+/*         document.addEventListener('DOMContentLoaded', event=>{
+            character_class.value = localStorage.getItem('character_class')
+        })
+
+        document.addEventListener('DOMContentLoaded', event =>{
+            player_name.value = localStorage.getItem('player_name')
+        })
+
+        document.addEventListener('DOMContentLoaded', event=>{
+            character_race.value = localStorage.getItem('character_race')
+        }) */
+
+        player_name.addEventListener('keyup', event =>{
+            console.log('Player Name keyup');
+            localStorage.setItem('player_name', player_name.value);
+        })
+
+
+        i_character_name.addEventListener('keyup', event =>{
+            console.log('i_character_name keyup')
+            localStorage.setItem('i_character_name', i_character_name.value)
+        })
+
+        character_class.addEventListener('change', event =>{
+            console.log('character_class select')
+            localStorage.setItem('character_class', character_class.value)
+        })
+
+        character_race.addEventListener('change', event =>{
+            console.log('character_race select')
+            localStorage.setItem('character_race', character_race.value)
+        })
+
+        character_alignment.addEventListener('change', event =>{
+            console.log('character_alignment select')
+            localStorage.setItem('character_alignment', character_alignment.value)
+        })
+
+        pc_level.addEventListener('change', event =>{
+            localStorage.setItem('pc_level', pc_level.value);
+        })
+
+        function class_filter(class_name) {
+            let classes = character_classes.filter(c => c.name ==class_name)
+            if (classes.length == 1) {
+                let c_class = classes[0];
+                document.getElementById("h_class_features").innerHTML = "Class features";
+                document.getElementById("class_features").innerHTML = c_class.features;
+                document.getElementById("h_hit_points").innerHTML = "Hit points";
+                document.getElementById("hit_points").innerHTML = c_class.hitpoints;
+                
+            }
+
+            
+        }
+
+    </script>
 </body>
 </html>

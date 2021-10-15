@@ -1,0 +1,51 @@
+html {
+    background-color:rgb(163, 30, 30);
+    color: white;
+    font-family:sans-serif;
+    font-style: oblique;
+    background:linear-gradient(62deg, rgba(0,0,0,1) 0%, rgba(227,37,37,1) 48%, rgba(0,0,0,1) 88%);
+    height: 100%;
+    
+
+}
+
+label {
+    font-size: larger;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    text-shadow: rgb(94, 11, 27) 4px 4px 3px;
+    border-bottom: 0.5em groove rgb(216, 217, 218);
+    padding-bottom: 0.5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+#pc_names {
+    align-self: auto;
+    padding-top: 0.5em;
+    border-bottom: 0.2em groove rgb(216, 217, 218);
+}
+#basic_info {
+    padding-top: 0.5em;
+    border-bottom: groove rgb(216, 217, 218);
+    padding-bottom: 0.5em;
+}
+
+#player_name{
+    margin-left: 5em;
+    
+}
+#player_name_label{
+    margin-left: 4em;
+}
+
+#pc_level{
+    margin-left: 5em;
+}
+
+#pc_level_label{
+    margin-left: 5.5em;
+}

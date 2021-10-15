@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheet</title>
+</head>
+<body>
+    <label for="player_name" id="player_name_label">Player Name</label>
+    <p><input type="text" id="player_name"></p>
+
+    <label for="i_character_name" id="character_name_label">Character Name</label>
+    <p><input type="text" id="i_character_name"></p>
+    
+
+    <label for="character_class">Choose a class:</label>
+    <select name="character_class" id="character_class">
+        <option value="">--Please choose an option--</option>
+        <option value="bard">Bard</option>
+        <option value="barbarian">Barbarian</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        <option value="fighter">Fighter</option>
+        <option value="monk">Monk</option>
+        <option value="paladin">Paladin</option>
+        <option value="ranger">Ranger</option>
+        <option value="rogue">Rogue</option>
+        <option value="sorcerer">Sorcerer</option>
+        <option value="warlock">Warlock</option>
+        <option value="wizard">Wizard</option>
+    </select>
+
+    <label for="character_race">Choose a race:</label>
+    <select name="character_race" id="character_race">
+        <option value="">--Please choose an option--</option>
+        <option value="dragonborn">Dragonborn</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="elf">Elf</option>
+        <option value="gnome">Gnome</option>
+        <option value="half_elf">Half-Elf</option>
+        <option value="halfling">Halfling</option>
+        <option value="half_orc">Half-Orc</option>
+        <option value="human">Human</option>
+        <option value="tiefling">Tiefling</option>
+    </select>
+
+    <label for="character_alignment">Choose an alignment:</label>
+    <select name="character_alignment" id="character_alignment">
+        <option value="">--Please choose an option--</option>
+        <option value="lawful_good">Lawful Good</option>
+        <option value="neutral_good">Neutral Good</option>
+        <option value="chaotic_good">Chaotic Good </option>
+        <option value="lawful_neutral">Lawful Neutral</option>
+        <option value="true_neutral">True Neutral</option>
+        <option value="chaotic_neutral">Chaotic Neutral</option>
+        <option value="lawful_evil">Lawful Evil</option>
+        <option value="neutral_evil">Neutral Evil</option>
+        <option value="chaotic_evil">Chaotic Evil</option>
+    </select>
+
+    <p id="test">
+
+    </p>
+    
+    <script>
+        
+
+
+
+        document.addEventListener('DOMContentLoaded', event =>{
+            i_character_name.value = localStorage.getItem('i_character_name');
+            character_class.value = localStorage.getItem('character_class');
+            player_name.value = localStorage.getItem('player_name');
+            character_race.value = localStorage.getItem('character_race');
+            character_alignment.value = localStorage.getItem('character_alignment');
+        })
+
+/*         document.addEventListener('DOMContentLoaded', event=>{
+            character_class.value = localStorage.getItem('character_class')
+        })
+
+        document.addEventListener('DOMContentLoaded', event =>{
+            player_name.value = localStorage.getItem('player_name')
+        })
+
+        document.addEventListener('DOMContentLoaded', event=>{
+            character_race.value = localStorage.getItem('character_race')
+        }) */
+
+        player_name.addEventListener('keyup', event =>{
+            console.log('Player Name keyup');
+            character.set("p_name", player_name.value);
+            document.getElementById("test").innerHTML = character.get("p_name");
+            localStorage.setItem('player_name', player_name.value);
+        })
+
+
+        i_character_name.addEventListener('keyup', event =>{
+            console.log('i_character_name keyup')
+            localStorage.setItem('i_character_name', i_character_name.value)
+        })
+
+        character_class.addEventListener('change', event =>{
+            console.log('character_class select')
+            localStorage.setItem('character_class', character_class.value)
+        })
+
+        character_race.addEventListener('change', event =>{
+            console.log('character_race select')
+            localStorage.setItem('character_race', character_race.value)
+        })
+
+        character_alignment.addEventListener('change', event =>{
+            console.log('character_alignment select')
+            localStorage.setItem('character_alignment', character_alignment.value)
+        })
+
+
+    </script>
+</body>
+</html>
